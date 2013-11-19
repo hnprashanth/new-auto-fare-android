@@ -7,6 +7,9 @@
     <author email="prashanth@prashanth.net" href="http://prashanth.net">
         Prashanth HN
     </author>
+	<feature name="Geolocation">
+	    <param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
+	</feature>
     <feature name="http://api.phonegap.com/1.0/device" />
     <preference name="permissions" value="none" />
     <preference name="orientation" value="default" />
