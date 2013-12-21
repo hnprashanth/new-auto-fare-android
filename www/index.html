@@ -3,13 +3,28 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Bangalore Auto Rickshaw New Fare Calculator!</title>
+		<script>
+		function calcFare() {
+		  var oldFare = document.getElementById('oldf').value;
+		  if (oldFare <= 20) {
+		  	alert("New fare is: Rs.25");
+		}
+		  else {
+		    var km = (oldFare - 20)/11;
+			var newFare = 25+(km*13);
+			newFare = Math.round(newFare * 100) / 100;
+			alert("New fare is: Rs."+newFare);  
+		
+		  }
+	  }	
+		</script>
     </head>
     <body>
         <h1>Bangalore Auto Rickshaw New Fare Calculator!</h1>
         <h3>Enter old fare to get new fare</h3>
-          <form action="http://www.techbangalore.com/find.php" method="post" >
-              <input type="text" name="oldf" />
-              <input type="submit" value="Find!" />
+          <form method="post" >
+              <input type="text" name="oldf" id="oldf" />
+              <input type="submit" value="Find!" onclick="calcFare()" />
           </form>
         <h4>Developed by <a href="http://www.techbangalore.com" >Tech Bangalore</a></h4>
     </body>
